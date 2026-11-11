@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "dataprofiler[reports]>=0.8.1",
+    "imblearn>=0.0",
     "joblib>=1.6.0",
     "matplotlib>=3.11.2",
     "numpy>=2.5.4",
@@ -14,6 +15,7 @@ dependencies = [
     "scipy>=1.18.1",
     "seaborn>=0.13.2",
     "streamlit>=1.67.0",
+    "xgboost>=3.4.1",
 ]
 
 [project.scripts]
