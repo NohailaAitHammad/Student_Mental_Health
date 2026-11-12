@@ -1,12 +1,10 @@
-FROM apache/airflow:2.9.2-python3.10
+FROM apache/airflow:3.4.0-python3.12
 
 COPY requirements.txt /requirements.txt
 
-RUN sh /uv-installer.sh && rm /uv-installer.sh
+USER airflow
 
-RUN uv pip install --no-cache-dir \
-      "apache-airflow==2.9.2" \
-      --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.9.2/constraints-3.10.txt" \
-      -r /requirements.txt
-
-RUN uv sync --locked
+RUN pip install --no-cache-dir \
+    "apache-airflow==3.4.0" \
+    -r /requirements.txt \
+    --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.4.0/constraints-3.12.txt"

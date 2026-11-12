@@ -1,15 +1,8 @@
+
 pandas
 numpy
 matplotlib
 scikit-learn
 seaborn
 joblib
-jupyter
-jupyterlab
-ipykernel
 python-dotenv
-psycopg2-binary
-sqlalchemy
-ydata-profiling
-DataProfiler
-scikit-learn

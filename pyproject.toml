@@ -3,10 +3,10 @@ name = "student-mental-health"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
-    "dataprofiler[reports]>=0.8.1",
     "imblearn>=0.0",
+    "imbalanced-learn>=0.0",
     "joblib>=1.6.0",
     "matplotlib>=3.11.2",
     "numpy>=2.5.4",
