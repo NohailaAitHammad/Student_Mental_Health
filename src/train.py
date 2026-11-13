@@ -2,11 +2,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
-# from imblearn.over_sampling import SMOTE
-# import xgboost as xgb
 from sklearn.metrics import accuracy_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay, classification_report, roc_curve, auc, roc_auc_score
 from sklearn.preprocessing import label_binarize
-# from xgboost import XGBClassifier
 from sklearn.preprocessing import label_binarize
 import matplotlib.pyplot as plt
 from sklearn.pipeline import Pipeline
