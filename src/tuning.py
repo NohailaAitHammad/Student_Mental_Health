@@ -44,7 +44,7 @@ def tuning_models(X_train, X_test, y_train, y_test):
             ),
             
             "RandomForestClassifier": (
-                  RandomForestClassifier(random_state=42),
+                  RandomForestClassifier( n_jobs=1, random_state=42),
                   {
                         'classificator__n_estimators': [100, 200, 300],
                         'classificator__max_depth': [5, 10, 15, 20, None],
@@ -77,7 +77,7 @@ def tuning_models(X_train, X_test, y_train, y_test):
             ])
 
 
-            gs = GridSearchCV(estimator=pipe, param_grid=params, cv=5, scoring='f1_macro', n_jobs=-1)
+            gs = GridSearchCV(estimator=pipe, param_grid=params, cv=5, scoring='f1_macro', n_jobs=2, verbose=1,error_score="raise")
 
             # Fit
             gs.fit(X_train, y_train)
